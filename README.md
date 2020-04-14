@@ -1,1 +1,22 @@
 # Roman-Numeral-encoder-JavaScript
+function solution(number){
+var romanNumeral = ['M', 'CM', 'D', 'CD', 'C', 'XC', 'L',
+'XL', 'X', 'IX', 'V', 'IV', 'I'];/*an array of roman numerals
+in order from largest to smallest*/
+var decimals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9,
+5, 4, 1];/* an array of decimals values that match the index
+of the roman numerals*/
+var romanized = '';/* creates an empty string call romanized*/
+for(var i=0;i<decimals.length;i++){/* this loop through the decimals
+array*/
+while(decimals[i]<=number){/*do something as soon as the indexed number
+for the decimals array is less than the input number*/
+romanized += romanNumerals[i];/*push the roman numeral with
+the same index value as the decimals to the romanized string*/
+number-= decimals[i];/* reduce the input number by the matching decimals
+index number
+}
+}
+return romanized;
+}
+convertToRoman(50);
